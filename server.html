@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eclipse RP Info</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff, #e6ecff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    animation: fadeIn 1.5s ease;
+}
+
+/* TITLE */
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* TEXT */
+.ip {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #4a6cf7;
+    animation: glow 2s infinite alternate;
+}
+
+/* GLOW */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #4a6cf7;
+    }
+    to {
+        text-shadow: 0 0 25px #4a6cf7, 0 0 50px #4a6cf7;
+    }
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: #4a6cf7;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #4a6cf7;
+}
+
+/* BACK BUTTON */
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #4a6cf7;
+    font-weight: 500;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FLOATING CIRCLES */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(74,108,247,0.1);
+    animation: float 10s infinite linear;
+}
+
+.circle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+}
+
+.circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    bottom: 10%;
+    right: 10%;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+</style>
+
+</head>
+
+<body>
+
+<a href="index.html" class="back">⬅ Back</a>
+
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="card">
+    <div class="title">Eclipse RP Information</div>
+    
+    <div class="ip">🔥 Server IP Coming Soon...</div>
+
+    <!-- DISCORD BUTTON -->
+    <a href="https://discord.gg/M2eFBYA9" target="_blank" class="btn">
+        Notify Me
+    </a>
+</div>
+
+</body>
+</html>
